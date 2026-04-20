@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodWall - Wallpapers to Match Your Soul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: var(--primary);
+            filter: blur(150px);
+            opacity: 0.3;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+        p.tagline {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+        }
+        .cta-button {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        .features {
+            padding: 8rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .feature-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.05);
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .feature-card p {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+        .mockup-container {
+            margin-top: 4rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .mockup {
+            width: 280px;
+            height: 580px;
+            background: #1e293b;
+            border: 8px solid #334155;
+            border-radius: 40px;
+            position: relative;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+        .mockup::after {
+            content: 'MoodWall';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255,255,255,0.1);
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        footer {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #64748b;
+        }
+        footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: var(--primary);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>MoodWall</h1>
+        <p class="tagline">The first wallpaper app that resonates with your soul. Browse by mood, overlay inspiration, and transform your daily digital experience.</p>
+        <a href="#" class="cta-button">Coming soon on App Store</a>
+        <div class="mockup-container">
+            <div class="mockup"></div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="feature-card">
+            <h3>Feel Your Screen</h3>
+            <p>Use intuitive emoji-based filters to find wallpapers that match your current vibe perfectly.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Daily Motivation</h3>
+            <p>Overlay hand-picked motivational quotes to keep your mindset elevated every time you check your phone.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Crystal Clear</h3>
+            <p>Only the highest resolution wallpapers, curated for modern displays and retina resolutions.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 MoodWall - Ahsan Studio</p>
+        <div style="margin-top: 1rem;">
+            <a href="moodwall-privacy-policy.html">Privacy Policy</a>
+            <a href="Support.html">Support</a>
+        </div>
+    </footer>
+</body>
+</html>
